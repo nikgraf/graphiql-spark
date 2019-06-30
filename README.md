@@ -66,6 +66,10 @@ function Example() {
 export default Example;
 ```
 
+Preview:
+
+<img width="639" alt="GrapiQL screenshot" src="https://user-images.githubusercontent.com/223045/60402568-e40aff80-9b91-11e9-8b85-5b68f45c459b.png">
+
 ## Inspiration
 
 Once upon a time I was giving a GraphQL beginner workshop using the The Star Wars API example. I wanted that in this example every GraphQL request is not more than a simple HTTP request. My attempt to demo this live failed since the example was built in a way that the production version would include a client side schema.
