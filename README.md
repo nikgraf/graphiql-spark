@@ -1,9 +1,13 @@
 # GraphiQL<sup>Local</sup>
 
-GraphiQL<sup>Local</sup> allows you to run GraphQL queries or mutations completely client side in a GraphiQL instance.
-This allows you to demo a schema or teach GraphQL on your website without having to worry about a running GraphQL endpoint.
+GraphiQL<sup>Local</sup> exists to demo a GraphQL schema without any GraphQL endpoint.
 
-In addition it's setup to run the provied query or mutation right away and show the returned response.
+It allows you to run queries or mutations completely client side a.k.a serverless!
+In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
+
+## How is it different to GraphiQL?
+
+Not by much. GraphiQL<sup>Local</sup> is thin convinience layer on top of GraphiQL.
 
 ## Benefits
 
@@ -58,13 +62,21 @@ export default function Example() {
 
 ## FAQ
 
+### Are relations (mutually-recursive resolver) possible?
+
+Yes
+
 ### Are Mutations supported?
 
-Yes, as long as you implement a resolver it will work.
+Yes
 
 ### Are Subscriptions supported?
 
 No, but I would welcome a proposal on how this could be done.
+
+### How does it work?
+
+GraphiQL<sup>Local</sup> builds a Schema locally in the browser and then directly can invoke the Schema instead of using a Transport Layer like HTTP.
 
 ## Inspiration
 
