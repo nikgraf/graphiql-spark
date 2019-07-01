@@ -18,26 +18,10 @@ import React from 'react';
 import GraphiQLLocal from 'graphiql-local';
 import 'graphiql/graphiql.css';
 
-const resolvers = {
-  Query: {
-    posts: () => [
-      { title: 'Advanced GraphQL Concepts', author: { name: 'Nik Graf' } },
-      {
-        title: 'Why I Write CSS in JavaScript',
-        author: { name: 'Max Stoiber' },
-      },
-    ],
-  },
-};
-
+// Schema defined in the Schema Definition Language
 const typeDefs = `
-  type Author {
-    name: String
-  }
-
   type Post {
     title: String
-    author: Author!
   }
 
   type Query {
@@ -45,30 +29,42 @@ const typeDefs = `
   }
 `;
 
+// Client-side resolvers
+const resolvers = {
+  Query: {
+    posts: () => [
+      { title: 'Advanced GraphQL Concepts' },
+      { title: 'Why I Write CSS in JavaScript' },
+    ],
+  },
+};
+
+// Example query
 const query = `query {
   posts {
-    title,
-    author {
-      name
-    }
+    title
   }
 }
 `;
 
-function Example() {
+export default function Example() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
       <GraphiQLLocal query={query} resolvers={resolvers} typeDefs={typeDefs} />
     </div>
   );
 }
-
-export default Example;
 ```
 
-Preview:
+## FAQ
 
-<img width="639" alt="GrapiQL screenshot" src="https://user-images.githubusercontent.com/223045/60402568-e40aff80-9b91-11e9-8b85-5b68f45c459b.png">
+### Are Mutations supported?
+
+Yes, as long as you implement a resolver it will work.
+
+### Are Subscriptions supported?
+
+No, but I would welcome a proposal on how this could be done.
 
 ## Inspiration
 

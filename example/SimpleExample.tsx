@@ -5,23 +5,15 @@ import 'graphiql/graphiql.css';
 const resolvers = {
   Query: {
     posts: () => [
-      { title: 'Advanced GraphQL Concepts', author: { name: 'Nik Graf' } },
-      {
-        title: 'Why I Write CSS in JavaScript',
-        author: { name: 'Max Stoiber' },
-      },
+      { title: 'Advanced GraphQL Concepts' },
+      { title: 'Why I Write CSS in JavaScript' },
     ],
   },
 };
 
 const typeDefs = `
-  type Author {
-    name: String
-  }
-
   type Post {
     title: String
-    author: Author!
   }
 
   type Query {
@@ -31,20 +23,15 @@ const typeDefs = `
 
 const query = `query {
   posts {
-    title,
-    author {
-      name
-    }
+    title
   }
 }
 `;
 
-function Example() {
+export default function SimpleExample() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
       <GraphiQLLocal query={query} resolvers={resolvers} typeDefs={typeDefs} />
     </div>
   );
 }
-
-export default Example;
