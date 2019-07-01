@@ -1,0 +1,33 @@
+### Inline Definition MDX Example
+
+import GraphiQLLocal from '../.';
+import 'graphiql/graphiql.css';
+
+export const resolvers = {
+  Query: {
+    posts: () => [
+      { title: 'Advanced GraphQL Concepts' },
+      { title: 'Why I Write CSS in JavaScript' },
+    ],
+  },
+};
+
+export const typeDefs = `
+  type Post {
+    title: String
+  }
+  type Query {
+    posts: [Post]
+  }
+`;
+
+export const query = `query {
+  posts {
+    title
+  }
+}
+`;
+
+<div style={{ height: 400, maxWidth: 640 }}>
+  <GraphiQLLocal query={query} resolvers={resolvers} typeDefs={typeDefs} />
+</div>

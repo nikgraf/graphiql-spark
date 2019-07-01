@@ -6,6 +6,9 @@ import RelationExample from './RelationExample';
 import VariablesExample from './VariablesExample';
 import MutationExample from './MutationExample';
 import CustomLogoExample from './CustomLogoExample';
+import { MDXProvider } from '@mdx-js/tag';
+import ComponentMdxExample from './ComponentMdxExample.mdx';
+import InlineMdxExample from './InlineMdxExample.mdx';
 
 const App = () => {
   return (
@@ -21,6 +24,11 @@ const App = () => {
       <MutationExample />
       <h2>Custom Logo Example</h2>
       <CustomLogoExample />
+      <h2>MDX Examples</h2>
+      <MDXProvider>
+        <ComponentMdxExample />
+        <InlineMdxExample />
+      </MDXProvider>
     </div>
   );
 };
