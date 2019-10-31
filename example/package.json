@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdx-js/react": "^1.0.21",
     "@mdx-js/tag": "^0.20.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "react-app-polyfill": "^1.0.0"
   },
   "alias": {
