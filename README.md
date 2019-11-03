@@ -2,7 +2,7 @@
 
 Demo a GraphQL schema without a GraphQL endpoint.
 
-## What?
+## What & Why?
 
 GraphiQL Spark allows you to run queries or mutations completely client side! In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
 
@@ -22,7 +22,16 @@ Not by much. GraphiQL Spark is thin convinience layer on top of GraphiQL.
 
 - Requires the packages `graphql` & `graphl-tool` which adds ~64kb (minified + gzipped) to the bundle.
 
-## How to use
+## Install
+
+```bash
+# npm
+npm install --save graphiql-spark
+# yarn
+yarn add graphiql-spark
+```
+
+## Usage
 
 ```js
 import React from "react";
