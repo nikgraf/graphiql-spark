@@ -1,6 +1,6 @@
 # GraphiQL Spark
 
-GraphiQL Spark exists to demo a GraphQL schema without any GraphQL endpoint.
+GraphiQL Spark exists to demo a GraphQL schema without a GraphQL endpoint.
 
 It allows you to run queries or mutations completely client side a.k.a serverless!
 In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
@@ -18,9 +18,9 @@ Not by much. GraphiQL Spark is thin convinience layer on top of GraphiQL.
 ## How to use
 
 ```js
-import React from 'react';
-import GraphiQlSpark from 'graphiql-spark';
-import 'graphiql/graphiql.css';
+import React from "react";
+import GraphiQlSpark from "graphiql-spark";
+import "graphiql/graphiql.css";
 
 // Schema defined in the Schema Definition Language
 const typeDefs = `
@@ -37,10 +37,10 @@ const typeDefs = `
 const resolvers = {
   Query: {
     posts: () => [
-      { title: 'Advanced GraphQL Concepts' },
-      { title: 'Why I Write CSS in JavaScript' },
-    ],
-  },
+      { title: "Advanced GraphQL Concepts" },
+      { title: "Why I Write CSS in JavaScript" }
+    ]
+  }
 };
 
 // Example query
@@ -91,19 +91,21 @@ Once I started working on a new personal blog covering GraphQL concepts I was lo
 ## Contributing
 
 ```
-yarn start # or `npm start`
+yarn start
 ```
 
 This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
 
-To do a one-off build for production, use `yarn build` or `npm run build`.
+To do a one-off build for production, use `yarn build`.
 
-### Docs
+### Docs / Examples
 
 To run the docs locally (the examples are helpful during development) inside another tab run:
 
 ```
 cd example
-yarn # or `npm i` to install dependencies
-yarn start # or `npm start`
+yarn # install dependencies
+yarn start
 ```
+
+The build command `yarn build` inside the example directory is optimized for generating the docs.
