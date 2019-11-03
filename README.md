@@ -1,19 +1,26 @@
 # GraphiQL Spark
 
-GraphiQL Spark exists to demo a GraphQL schema without a GraphQL endpoint.
+Demo a GraphQL schema without a GraphQL endpoint.
 
-It allows you to run queries or mutations completely client side a.k.a serverless!
-In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
+## What?
 
-## How is it different to GraphiQL?
+GraphiQL Spark allows you to run queries or mutations completely client side! In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
+
+**_Note_:** Out of the box GraphiQL requires you to press the `play` button to run the query and see the results.
+
+### How is it different to GraphiQL?
 
 Not by much. GraphiQL Spark is thin convinience layer on top of GraphiQL.
 
-## Benefits
+### Benefits
 
 - No Downtime (your static site might work, but the GraphQL endpoint might be down)
 - No Server Cost (why pay for demoing a GraphQL concept on your blog?)
 - Faster feedback loop (no network request)
+
+### Downsides
+
+- Requires the packages `graphql` & `graphl-tool` which adds ~64kb (minified + gzipped) to the bundle.
 
 ## How to use
 
@@ -51,14 +58,20 @@ const query = `query {
 }
 `;
 
-export default function Example() {
+export default function SimpleExample() {
   return (
-    <div style={{ height: 400, maxWidth: 640 }}>
-      <GraphiQlSpark query={query} resolvers={resolvers} typeDefs={typeDefs} />
+    <div style={{ height: "25rem", border: "1px solid #e0e0e0" }}>
+      <GraphiQLSpark query={query} resolvers={resolvers} typeDefs={typeDefs} />
     </div>
   );
 }
 ```
+
+<img width="738" alt="simple-example" src="https://user-images.githubusercontent.com/223045/68088624-41c19800-fe61-11e9-97ef-d5f71b3c924c.png">
+
+## More Examples
+
+Please check out the docs at [https://nikgraf.github.io/graphiql-spark/](https://nikgraf.github.io/graphiql-spark/)
 
 ## FAQ
 

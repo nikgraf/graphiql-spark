@@ -21,6 +21,8 @@ import {
   inlineMdx,
   componentMdx
 } from "./codeExamples";
+import Intro from "./Intro.mdx";
+import Outro from "./Outro.mdx";
 
 const App = () => {
   return (
@@ -38,22 +40,23 @@ const App = () => {
         />
       </Header>
       <Main>
-        <H2>Simple Example</H2>
+        <Intro />
+        <h2>Simple Example</h2>
         <Code code={simple} />
         <SimpleExample />
-        <H2>Relation Example</H2>
+        <h2>Relation Example</h2>
         <Code code={relation} />
         <RelationExample />
-        <H2>Variables Example</H2>
+        <h2>Variables Example</h2>
         <Code code={variables} />
         <VariablesExample />
-        <H2>Mutation Example</H2>
+        <h2>Mutation Example</h2>
         <Code code={mutation} />
         <MutationExample />
-        <H2>Custom Logo Example</H2>
+        <h2>Custom Logo Example</h2>
         <Code code={customLogo} />
         <CustomLogoExample />
-        <H2>MDX Examples</H2>
+        <h2>MDX Examples</h2>
         <MDXProvider>
           <h3>Inline Definition MDX Example</h3>
           <Code code={inlineMdx} />
@@ -62,6 +65,7 @@ const App = () => {
           <Code code={componentMdx} />
           <InlineMdxExample />
         </MDXProvider>
+        <Outro />
       </Main>
       <Footer>
         Built on top of{" "}

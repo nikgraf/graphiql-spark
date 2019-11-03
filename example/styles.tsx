@@ -11,17 +11,14 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   margin: 0 auto;
-  max-width: 58rem;
+  max-width: 48rem;
   border-radius: 0.5rem;
   background: white;
+  padding: 0 1rem;
 `;
 
 export const Footer = styled.footer`
   margin: 2rem auto;
-  max-width: 60rem;
+  max-width: 48rem;
   text-align: center;
-`;
-
-export const H2 = styled.h2`
-  margin-top: 4rem;
 `;

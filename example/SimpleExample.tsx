@@ -2,15 +2,7 @@ import * as React from "react";
 import GraphiQLSpark from "../.";
 import "graphiql/graphiql.css";
 
-const resolvers = {
-  Query: {
-    posts: () => [
-      { title: "Advanced GraphQL Concepts" },
-      { title: "Why I Write CSS in JavaScript" }
-    ]
-  }
-};
-
+// Schema defined in the Schema Definition Language
 const typeDefs = `
   type Post {
     title: String
@@ -21,6 +13,17 @@ const typeDefs = `
   }
 `;
 
+// Client-side resolvers
+const resolvers = {
+  Query: {
+    posts: () => [
+      { title: "Advanced GraphQL Concepts" },
+      { title: "Why I Write CSS in JavaScript" }
+    ]
+  }
+};
+
+// Example query
 const query = `query {
   posts {
     title

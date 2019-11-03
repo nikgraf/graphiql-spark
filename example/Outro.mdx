@@ -1,0 +1,27 @@
+## FAQ
+
+### Are relations (mutually-recursive resolver) possible?
+
+Yes
+
+### Are Mutations supported?
+
+Yes
+
+### Are Subscriptions supported?
+
+No, but I would welcome a proposal on how this could be done.
+
+### How does it work?
+
+GraphiQL Spark builds a Schema locally in the browser and then directly can invoke the Schema instead of using a Transport Layer like HTTP.
+
+### Can I use it with GraphQL Nexus or other Code-First Schema Generators?
+
+Not yet, but probably makes sense to publish such a version. Ping me if you are interested to help. Ideally it would be a named export, but we make sure non-used dependencies are tree-shaked.
+
+## Inspiration
+
+Once upon a time I was giving a GraphQL beginner workshop using the The Star Wars API example. I wanted that in this example every GraphQL request is not more than a simple HTTP request. My attempt to demo this live failed since the example was built in a way that the production version would include a client side schema.
+
+Once I started working on a new personal blog covering GraphQL concepts I was looking for a way to provide executable examples (instead of pasting text or images). And instead of finishing my blog post I procrastinated and built this tool 😄
