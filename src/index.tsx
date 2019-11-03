@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import GraphiQL from 'graphiql';
-import { makeExecutableSchema } from 'graphql-tools';
-import { graphql } from 'graphql';
+import React, { useState, useEffect } from "react";
+import GraphiQL from "graphiql";
+import { makeExecutableSchema } from "graphql-tools";
+import { graphql } from "graphql";
 
 interface GraphQLParams {
   query: string;
@@ -28,7 +28,7 @@ const GraphiQLSpark: React.FC<Props> = ({
   function graphQLFetcher(graphQLParams: GraphQLParams) {
     const schema = makeExecutableSchema({
       typeDefs,
-      resolvers,
+      resolvers
     });
     const { query, variables, operationName } = graphQLParams;
     return graphql(schema, query, resolvers, null, variables, operationName);
@@ -40,7 +40,7 @@ const GraphiQLSpark: React.FC<Props> = ({
       const vars = rest.variables && JSON.parse(rest.variables);
       const schema = makeExecutableSchema({
         typeDefs,
-        resolvers,
+        resolvers
       });
       const jsonResponse = await graphql(
         schema,
@@ -58,13 +58,7 @@ const GraphiQLSpark: React.FC<Props> = ({
 
   return (
     <GraphiQL {...rest} fetcher={graphQLFetcher} response={response}>
-      {children ? (
-        children
-      ) : (
-        <GraphiQL.Logo>
-          GraphiQL<sup style={{ fontSize: '0.6em' }}>Local</sup>
-        </GraphiQL.Logo>
-      )}
+      {children ? children : <GraphiQL.Logo>GraphiQL Spark</GraphiQL.Logo>}
     </GraphiQL>
   );
 };
