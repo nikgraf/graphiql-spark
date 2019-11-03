@@ -1,14 +1,14 @@
-import * as React from 'react';
-import GraphiQLSpark from '../.';
-import 'graphiql/graphiql.css';
+import * as React from "react";
+import GraphiQLSpark from "../.";
+import "graphiql/graphiql.css";
 
 const resolvers = {
   Query: {
     posts: () => [
-      { title: 'Advanced GraphQL Concepts' },
-      { title: 'Why I Write CSS in JavaScript' },
-    ],
-  },
+      { title: "Advanced GraphQL Concepts" },
+      { title: "Why I Write CSS in JavaScript" }
+    ]
+  }
 };
 
 const typeDefs = `
@@ -30,7 +30,7 @@ const query = `query {
 
 export default function SimpleExample() {
   return (
-    <div style={{ height: 400, maxWidth: 640 }}>
+    <div style={{ height: "25rem", border: "1px solid #e0e0e0" }}>
       <GraphiQLSpark query={query} resolvers={resolvers} typeDefs={typeDefs} />
     </div>
   );

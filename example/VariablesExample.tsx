@@ -1,7 +1,7 @@
-import * as React from 'react';
-import GraphiQLSpark from '../.';
-import 'graphiql/graphiql.css';
-import { find, filter } from 'lodash';
+import * as React from "react";
+import GraphiQLSpark from "../.";
+import "graphiql/graphiql.css";
+import { find } from "lodash";
 
 const typeDefs = `
   type Author {
@@ -15,14 +15,14 @@ const typeDefs = `
 `;
 
 const authors = [
-  { id: 'xxx', name: 'Nik Graf' },
-  { id: 'yyy', name: 'Max Stoiber' },
+  { id: "xxx", name: "Nik Graf" },
+  { id: "yyy", name: "Max Stoiber" }
 ];
 
 const resolvers = {
   Query: {
-    author: (_, { id }) => find(authors, { id }),
-  },
+    author: (_, { id }) => find(authors, { id })
+  }
 };
 
 const queryWithVariable = `query($id: ID!) {
@@ -34,14 +34,14 @@ const queryWithVariable = `query($id: ID!) {
 
 export default function VariablesExample() {
   return (
-    <div style={{ height: 400, maxWidth: 640 }}>
+    <div style={{ height: "25rem", border: "1px solid #e0e0e0" }}>
       <GraphiQLSpark
         query={queryWithVariable}
         resolvers={resolvers}
         typeDefs={typeDefs}
         variables={JSON.stringify(
           {
-            id: 'xxx',
+            id: "xxx"
           },
           null,
           2
