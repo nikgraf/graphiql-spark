@@ -1,6 +1,6 @@
 ### Inline Definition MDX Example
 
-import GraphiQLLocal from '../.';
+import GraphiQLSpark from '../.';
 import 'graphiql/graphiql.css';
 
 export const resolvers = {
@@ -29,5 +29,5 @@ export const query = `query {
 `;
 
 <div style={{ height: 400, maxWidth: 640 }}>
-  <GraphiQLLocal query={query} resolvers={resolvers} typeDefs={typeDefs} />
+  <GraphiQLSpark query={query} resolvers={resolvers} typeDefs={typeDefs} />
 </div>

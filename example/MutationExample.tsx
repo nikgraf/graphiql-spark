@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GraphiQLLocal from '../.';
+import GraphiQLSpark from '../.';
 import 'graphiql/graphiql.css';
 import { find, filter } from 'lodash';
 
@@ -78,7 +78,7 @@ const mutation = `mutation ($title: String!, $authorId: ID!) {
 export default function MutationExample() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
-      <GraphiQLLocal
+      <GraphiQLSpark
         query={mutation}
         resolvers={resolvers}
         typeDefs={typeDefs}

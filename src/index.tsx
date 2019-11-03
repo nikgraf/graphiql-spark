@@ -17,7 +17,7 @@ interface Props {
   operationName?: string;
 }
 
-const GraphiQLLocal: React.FC<Props> = ({
+const GraphiQLSpark: React.FC<Props> = ({
   typeDefs,
   resolvers,
   children,
@@ -69,4 +69,4 @@ const GraphiQLLocal: React.FC<Props> = ({
   );
 };
 
-export default GraphiQLLocal;
+export default GraphiQLSpark;

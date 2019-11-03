@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GraphiQLLocal from '../.';
+import GraphiQLSpark from '../.';
 import GraphiQL from 'graphiql';
 import 'graphiql/graphiql.css';
 import { find, filter } from 'lodash';
@@ -72,9 +72,9 @@ const resolvers = {
 export default function CustomLogoExample() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
-      <GraphiQLLocal resolvers={resolvers} typeDefs={typeDefs}>
+      <GraphiQLSpark resolvers={resolvers} typeDefs={typeDefs}>
         <GraphiQL.Logo>Custom Logo 🙌</GraphiQL.Logo>
-      </GraphiQLLocal>
+      </GraphiQLSpark>
     </div>
   );
 }

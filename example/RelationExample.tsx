@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GraphiQLLocal from '../.';
+import GraphiQLSpark from '../.';
 import 'graphiql/graphiql.css';
 import { find, filter } from 'lodash';
 
@@ -64,7 +64,7 @@ const query = `query {
 export default function RelationExample() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
-      <GraphiQLLocal query={query} resolvers={resolvers} typeDefs={typeDefs} />
+      <GraphiQLSpark query={query} resolvers={resolvers} typeDefs={typeDefs} />
     </div>
   );
 }

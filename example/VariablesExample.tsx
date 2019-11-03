@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GraphiQLLocal from '../.';
+import GraphiQLSpark from '../.';
 import 'graphiql/graphiql.css';
 import { find, filter } from 'lodash';
 
@@ -35,7 +35,7 @@ const queryWithVariable = `query($id: ID!) {
 export default function VariablesExample() {
   return (
     <div style={{ height: 400, maxWidth: 640 }}>
-      <GraphiQLLocal
+      <GraphiQLSpark
         query={queryWithVariable}
         resolvers={resolvers}
         typeDefs={typeDefs}
