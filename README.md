@@ -76,7 +76,7 @@ export default function SimpleExample() {
 }
 ```
 
-<img width="738" alt="simple-example" src="https://user-images.githubusercontent.com/223045/68088624-41c19800-fe61-11e9-97ef-d5f71b3c924c.png">
+<img width="737" alt="graphiql-spark-simple-example" src="https://user-images.githubusercontent.com/223045/68088724-19866900-fe62-11e9-9f53-cbf895057e49.png">
 
 ## More Examples
 
