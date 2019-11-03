@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "module": "dist/graphiql-spark.esm.js",
   "typings": "dist/index.d.ts",
+  "repository": "github:nikgraf/graphiql-spark",
   "files": [
     "dist"
   ],
