@@ -6,7 +6,11 @@ Demo a GraphQL schema without a GraphQL endpoint.
 
 GraphiQL Spark allows you to run queries or mutations completely client side! In addition the query/mutation response is rendered once GraphiQL is mounted, which makes it ideal for blog posts.
 
-**_Note_:** Out of the box GraphiQL requires you to press the `play` button to run the query and see the results.
+_**Note:** Out of the box GraphiQL requires you to press the `play` button to run the query and see the results._
+
+See the demo video below on how to use it:
+
+[![GraphiQlSpark Simple Example Demo](https://user-images.githubusercontent.com/223045/68168525-4e311800-ff69-11e9-99f9-c08c188531fc.png)](https://egghead.io/lessons/graphql-use-graphiql-spark-to-demo-a-graphql-schema-without-an-endpoint)
 
 ### How is it different to GraphiQL?
 
