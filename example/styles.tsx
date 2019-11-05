@@ -22,3 +22,9 @@ export const Footer = styled.footer`
   max-width: 48rem;
   text-align: center;
 `;
+
+export const Tagline = styled.p`
+  font-size: 1.3rem;
+  color: #c5e3ff;
+  font-weight: 300;
+`;

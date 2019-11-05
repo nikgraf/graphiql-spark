@@ -11,7 +11,7 @@ import { MDXProvider } from "@mdx-js/tag";
 import ComponentMdxExample from "./ComponentMdxExample.mdx";
 import InlineMdxExample from "./InlineMdxExample.mdx";
 import Code from "./Code";
-import { Main, Header, Footer, H2 } from "./styles";
+import { Main, Header, Footer, Tagline } from "./styles";
 import {
   simple,
   relation,
@@ -29,7 +29,7 @@ const App = () => {
     <>
       <Header>
         <h1>GraphiQL Spark ✨</h1>
-        <p>Demo a GraphQL schema without a GraphQL endpoint</p>
+        <Tagline>Demo a GraphQL schema without a GraphQL endpoint</Tagline>
         <iframe
           src="https://ghbtns.com/github-btn.html?user=nikgraf&repo=graphiql-spark&type=star&count=true&size=large"
           frameBorder="0"
