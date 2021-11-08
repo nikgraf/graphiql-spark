@@ -37,7 +37,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "graphiql": "^0.16.0",
+    "graphiql": "^1.4.7",
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6"
   }
